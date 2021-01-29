@@ -41,7 +41,7 @@ From the console, create a bucket, apply a policy and a region.
 
 ![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png)
 
-<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png" width="48">
+<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png" width="250">
 
 ![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/AssignRegionToBucket.png)
 
