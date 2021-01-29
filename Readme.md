@@ -109,20 +109,20 @@ wordpress   wordpress-wordpress.apps.pilabs.labs.vass.es          wordpress   80
 Access to WordPress console and install the site.
 
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/InstallWordPress.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/InstallWordPress.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/InstallWP.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/InstallWP.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/RunInstallationWP.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/RunInstallationWP.png)
 
 
 ## Apply a example Theme to the wordpress.
 
 Once WP is installed, just make a custom change. For example apply a theme.
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/ActiveThemeWP.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/ActiveThemeWP.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/CheckyourWP.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CheckyourWP.png)
 
 
 # Create a bucket S3 in Noobaa for Velero
@@ -138,21 +138,21 @@ s3            s3-openshift-storage.apps.pilabs.labs.vass.es                   s3
 
 From the console, create a bucket, apply a policy and a region.
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/noobaaConsole.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/noobaaConsole.png)
 
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/CreateBucket.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucket.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/CreateBucketPolicy.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/AssignRegionToBucket.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/AssignRegionToBucket.png)
 
 
 # Check Volume Snapshot Classes for CSI provider
 
 You can think about "SnapShots" in K8S as persistent volumes and persistent volumes claims, where the Volume Snapshots is the PVC and the  Volume Snapshot Contents is the PV. When you create a Snapshot, you will use a VolumeSnapshotClass, from where you will configure the "Deletion Policy". The Volume Snapshots is not a cluster-wide object, so when you will delete the namespace, you will delete the Volume Snapshots and if the "Deletion Policy" of the  VolumeSnapshotClass is "Deleted" you will delete the Volume Snapshot Contents where the "data" is keep it. So in order to keep the data of the backup, be sure that the "Deletion Policy" of the VolumeSnapshotClass is retain.
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/VolumeSnapshoClasses.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/VolumeSnapshoClasses.png)
 
 ```
 oc get VolumeSnapshotClass
@@ -163,9 +163,9 @@ ocs-storagecluster-rbdplugin-snapclass      openshift-storage.rbd.csi.ceph.com  
 
 You can change the policy from the console or using the cli.
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/snapclassdeletionPolicyDelete.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/snapclassdeletionPolicyDelete.png)
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/snapclassdeletionPolicyRetain.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/snapclassdeletionPolicyRetain.png)
 
 
 
@@ -175,7 +175,7 @@ You can change the policy from the console or using the cli.
 
 From Noobaa console, obtain the connection details for your Bucket
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/ConnectApplication.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/ConnectApplication.png)
 
 
 Create a file "credentials-velero" with the S3(Noobaa) credential access.
@@ -334,4 +334,4 @@ MariaDB [test]> show tables;
 
 Check your WebSite.
 
-![alt text](https://github.com/vass-engineering/Demo-veleor-openshift46/blob/master/DocsImages/CheckyourWP.png)
+![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CheckyourWP.png)
