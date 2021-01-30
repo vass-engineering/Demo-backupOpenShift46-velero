@@ -19,7 +19,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [1. Requirements](#requirements)
+- [1. Requirements](#Requirements)
 - [2. Create a bucket S3 in Noobaa for Velero](#table-of-content)
 - [3. Install Velero integrated with AWS provider and CSI-provider.](#table-of-content)
 - [4. Install Velero integrated with AWS provider and CSI-provider.](#table-of-content)
