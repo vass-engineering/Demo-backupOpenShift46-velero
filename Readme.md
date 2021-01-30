@@ -72,7 +72,7 @@ ocs-storagecluster-rbdplugin-snapclass      openshift-storage.rbd.csi.ceph.com  
 
 * From Noobaa console, obtain the connection details for your Bucket:
 
-<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/ConnectApplication.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/ConnectApplication.png" width="400">
 
 * Create a file "credentials-velero" with the S3(Noobaa) credential access.
 
