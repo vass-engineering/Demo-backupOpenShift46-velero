@@ -11,7 +11,7 @@
 3. Check Volume Snapshot Classes for CSI provider
 4. Install Velero integrated with AWS provider and CSI-provider.
 5. Deploy a WordPress using MariaDB as the database with a persistent volume as an example.
-6. Apply an example Theme to the wordpress.
+6. Apply an example Theme to the WordPress.
 7. Make a backup of our WordPress project
 8. Delete and recover our WordPress project
 
@@ -82,8 +82,8 @@ vi credentials-velero
 
 ```
 [default]
-aws_access_key_id = 8Vv12B5LdnlB1w8xqACC
-aws_secret_access_key = m0scKSLvhv90UIxuKxeHwq5jGr8NTFOkWSI4F8iN
+aws_access_key_id = 8Vv12B5LXXXXXXXXXXXXXXX
+aws_secret_access_key = m0scKSLvhv90XXXXXXXXXXXXXXXXXXXx
 ```
 
 * The Cluster External Name (The URL Connection) by default is a connection secure https, but OpenShift will create and mount an auto signed certificate, and Velero will crash due the auto signed certificate. You can mount a valid signed certificate or just create a plain Route http for demo purpose or  internal  communications.
@@ -92,7 +92,7 @@ aws_secret_access_key = m0scKSLvhv90UIxuKxeHwq5jGr8NTFOkWSI4F8iN
 oc expose service s3 --name=s3-insecure --port=s3  --hostname=s3-insecure-openshift-storage.apps.pilabs.labs.vass.es
 ```
 
-#### Install Velero with the infomation obtained.
+#### Install Velero with the information obtained.
 
 * Change <> with your environment details:
 
@@ -109,7 +109,7 @@ velero install --provider aws  --plugins velero/velero-plugin-for-aws:v1.0.1,vel
 
 ## 5) Deploy a WordPress using MariaDB as the database with a persistent volume as an example.
 
-* Create a new project for wordpress
+* Create a new project for WordPress
 
 ```
 oc new-project wordpress
@@ -170,7 +170,7 @@ mariadb-1-deploy   0/1     Completed   0          3m1s
 
 ```
 
-* Deploy WordPress using OpenShift templates from github
+* Deploy WordPress using OpenShift templates from GitHub
 
 ```
 oc new-app php~https://github.com/wordpress/wordpress
@@ -213,7 +213,7 @@ Access to WordPress console and install the site.
 
 <img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/RunInstallationWP.png" width="700">
 
-## 6)Apply an example Theme to the wordpress.
+## 6)Apply an example Theme to the WordPress.
 
 * Once WP is installed, just make a custom change. For example apply a theme.
 
@@ -283,7 +283,7 @@ NAME                          BACKUP         STATUS            STARTED   COMPLET
 wordpressbck-20210129102324   wordpressbck   PartiallyFailed   <nil>     <nil>       1        1          2021-01-29 10:23:46 +0100 CET   <none>
 ```
 
-* Check the pods and objets from your project.
+* Check the pods and objects from your project.
 
 
 ```
@@ -302,7 +302,7 @@ mariadb   Bound    pvc-93189147-46ad-4458-9530-036822d5e229   20Gi       RWO    
 
 ```
 
-* Check your database to check that we have recover all the informacion:
+* Check your database:
 
 ```
 oc rsh mariadb-1-vg76x  
