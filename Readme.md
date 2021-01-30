@@ -34,17 +34,15 @@ s3            s3-openshift-storage.apps.pilabs.labs.vass.es                   s3
 
 From the console, create a bucket, apply a policy and a region.
 
-![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/noobaaConsole.png)
+
+<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/noobaaConsole.png" width="700">
 
 
-![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucket.png)
-
-![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png)
+<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucket.png" width="700">
 
 <img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CreateBucketPolicy.png" width="700">
 
-![alt text](https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/AssignRegionToBucket.png)
-
+<img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/AssignRegionToBucket.png" width="700">
 
 ## 3)  Check Volume Snapshot Classes for CSI provider
 
