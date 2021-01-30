@@ -15,21 +15,6 @@
 7. Make a backup of our WordPress project
 8. Delete and recover our WordPress project
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [1. Requirements](#Requirements)
-- [2. Create a bucket S3 in Noobaa for Velero](#table-of-content)
-- [3. Install Velero integrated with AWS provider and CSI-provider.](#table-of-content)
-- [4. Install Velero integrated with AWS provider and CSI-provider.](#table-of-content)
-- [5. Deploy a WordPress using MariaDB as the database with a persistent volume as an example.](#table-of-content)
-- [6. Apply an example Theme to the WordPress.](#table-of-content)
-- [7. Make a backup of our WordPress project](#table-of-content)
-- [8. Delete and recover our WordPress project](#table-of-content)
-
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 1) Requirements:
 
