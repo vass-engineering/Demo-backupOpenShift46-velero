@@ -14,6 +14,7 @@
 6. Apply an example Theme to the WordPress.
 7. Make a backup of our WordPress project
 8. Delete and recover our WordPress project
+9. Alternatives method to backup OpenShift
 
 
 ## 1) Requirements:
@@ -340,3 +341,12 @@ MariaDB [test]> show tables;
 * Check your WebSite.
 
 <img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/CheckyourWP.png" width="700">
+
+
+
+## 9) Alternatives method to backup OpenShift
+
+* Check this integration with Minio
+  *  https://www.openshift.com/blog/backup-openshift-resources-the-native-way
+* Check this integracion with OADP
+  * https://www.openshift.com/blog/openshift-commons-briefing-on-openshift-api-data-protection-oadp-with-ceph-csi
