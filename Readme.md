@@ -48,7 +48,7 @@ s3            s3-openshift-storage.apps.pilabs.labs.vass.es                   s3
 
 ## 3)  Check Volume Snapshot Classes for CSI provider
 
-* You can think about "SnapShots" in K8S as persistent volumes and persistent volumes claims, where the Volume Snapshots is the PVC and the  Volume Snapshot Contents is the PV. When you create a Snapshot, you will use a VolumeSnapshotClass, from where you will configure the "Deletion Policy". The Volume Snapshots is not a cluster-wide object, so when you will delete the namespace, you will delete the Volume Snapshots and if the "Deletion Policy" of the  VolumeSnapshotClass is "Deleted" you will delete the Volume Snapshot Contents where the "data" is keep it. So in order to keep the data of the backup, be sure that the "Deletion Policy" of the VolumeSnapshotClass is retain.
+* You can think about "SnapShots" in K8S as persistent volumes and persistent volumes claims, where the Volume Snapshots is the PVC and the Volume Snapshot Contents is the PV. When you create a Snapshot, you will use a VolumeSnapshotClass, from where you will configure the "Deletion Policy". The Volume Snapshots is not a cluster-wide object, so once the namespace is deleted , if the "Deletion Policy" of the VolumeSnapshotClass is "Deleted" you will delete the Volume Snapshot Contents where the "data" is keep it. So in order to keep the data of the backup, be sure that the "Deletion Policy" of the VolumeSnapshotClass is  set to retain.
 
 <img src="https://github.com/vass-engineering/Demo-backupOpenShift46-velero/blob/main/DocsImages/VolumeSnapshoClasses.png" width="700">
 
